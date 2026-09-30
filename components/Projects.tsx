@@ -243,7 +243,7 @@ export function Projects() {
           onMouseDown={(event) => { if (event.target === event.currentTarget) setSelectedProject(null); }}
         >
           <div data-gallery-panel className="relative grid max-h-[calc(100dvh-1.5rem)] w-full max-w-6xl grid-rows-[auto_minmax(0,1fr)] gap-4 overflow-hidden rounded-2xl border border-white/10 bg-[#10151a] p-3 shadow-2xl sm:max-h-[calc(100dvh-2.5rem)] sm:gap-8 sm:p-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(20rem,.9fr)] lg:grid-rows-1 lg:p-8">
-            <button type="button" onClick={(event) => { event.stopPropagation(); setSelectedProject(null); }} className="absolute right-4 top-4 z-30 grid size-9 place-items-center rounded-full border border-white/15 bg-ink/90 text-white transition-colors hover:border-lime hover:text-lime" aria-label="Close project details"><X size={18} /></button>
+            <button type="button" onClick={(event) => { event.stopPropagation(); setSelectedProject(null); }} className="absolute right-4 top-4 z-30 grid size-9 place-items-center rounded-full border border-white/15 bg-ink/90 text-white transition-colors hover:border-lime hover:text-lime max-sm:right-2 max-sm:top-2 max-sm:z-[70] max-sm:size-11 max-sm:touch-manipulation" aria-label="Close project details"><X size={18} /></button>
             
             {/* Bagian Kiri: Gambar */}
             <div>
@@ -304,9 +304,9 @@ export function Projects() {
 
             </div>
 
-              <div className="mt-3 flex shrink-0 flex-wrap gap-3 border-t border-white/10 pt-3 sm:mt-5 sm:pt-4">
-                <a href={selected.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-white/15 px-4 py-3 text-xs font-bold uppercase tracking-[0.12em] text-white transition-colors hover:border-lime hover:text-lime"><Github size={16} />GitHub repo</a>
-                {selected.demo && <a href={selected.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-lime px-4 py-3 text-xs font-bold uppercase tracking-[0.12em] text-ink transition-colors hover:bg-white"><ExternalLink size={16} />Live demo</a>}
+              <div className="mt-3 flex shrink-0 flex-wrap gap-3 border-t border-white/10 pt-3 sm:mt-5 sm:pt-4 max-sm:grid max-sm:grid-cols-2 max-sm:gap-2">
+                <a href={selected.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-white/15 px-4 py-3 text-xs font-bold uppercase tracking-[0.12em] text-white transition-colors hover:border-lime hover:text-lime max-sm:min-w-0 max-sm:justify-center max-sm:px-2 max-sm:text-[10px] max-sm:whitespace-nowrap"><Github size={16} />GitHub repo</a>
+                {selected.demo && <a href={selected.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-lime px-4 py-3 text-xs font-bold uppercase tracking-[0.12em] text-ink transition-colors hover:bg-white max-sm:min-w-0 max-sm:justify-center max-sm:px-2 max-sm:text-[10px] max-sm:whitespace-nowrap"><ExternalLink size={16} />Live demo</a>}
               </div>
             </div>
           </div>
