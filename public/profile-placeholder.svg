@@ -1,0 +1,8 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" rx="48" fill="#17221F"/>
+  <circle cx="400" cy="350" r="150" fill="#C8F36A" fill-opacity="0.82"/>
+  <path d="M155 900C175 690 275 600 400 600C525 600 625 690 645 900" fill="#7CE9D6" fill-opacity="0.72"/>
+  <circle cx="400" cy="350" r="150" stroke="#F2F4EF" stroke-opacity="0.5" stroke-width="3"/>
+  <path d="M155 900C175 690 275 600 400 600C525 600 625 690 645 900" stroke="#F2F4EF" stroke-opacity="0.5" stroke-width="3"/>
+  <text x="400" y="955" text-anchor="middle" fill="#F2F4EF" fill-opacity="0.7" font-family="sans-serif" font-size="28" letter-spacing="5">YOUR PHOTO</text>
+</svg>
