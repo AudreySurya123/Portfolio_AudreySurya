@@ -236,18 +236,18 @@ export function Projects() {
       {selected && (
         <div 
           ref={galleryRef} 
-          className="fixed inset-0 z-[60] grid place-items-center overflow-y-auto overscroll-none bg-ink/90 p-5 backdrop-blur-md" 
+          className="fixed inset-0 z-[60] grid place-items-center overflow-hidden overscroll-none bg-ink/90 p-3 backdrop-blur-md sm:p-5" 
           role="dialog" 
           aria-modal="true" 
           aria-label={`${selected.title} project details`} 
           onMouseDown={(event) => { if (event.target === event.currentTarget) setSelectedProject(null); }}
         >
-          <div data-gallery-panel className="relative my-auto grid w-full max-w-6xl gap-8 rounded-2xl border border-white/10 bg-[#10151a] p-4 shadow-2xl sm:p-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(20rem,.9fr)] lg:p-8">
-            <button type="button" onClick={() => setSelectedProject(null)} className="absolute right-4 top-4 z-10 grid size-9 place-items-center rounded-full border border-white/15 bg-ink/70 text-white transition-colors hover:border-lime hover:text-lime" aria-label="Close project details"><X size={18} /></button>
+          <div data-gallery-panel className="relative grid max-h-[calc(100dvh-1.5rem)] w-full max-w-6xl grid-rows-[auto_minmax(0,1fr)] gap-4 overflow-hidden rounded-2xl border border-white/10 bg-[#10151a] p-3 shadow-2xl sm:max-h-[calc(100dvh-2.5rem)] sm:gap-8 sm:p-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(20rem,.9fr)] lg:grid-rows-1 lg:p-8">
+            <button type="button" onClick={(event) => { event.stopPropagation(); setSelectedProject(null); }} className="absolute right-4 top-4 z-30 grid size-9 place-items-center rounded-full border border-white/15 bg-ink/90 text-white transition-colors hover:border-lime hover:text-lime" aria-label="Close project details"><X size={18} /></button>
             
             {/* Bagian Kiri: Gambar */}
             <div>
-              <div className={`project-thumb aspect-[1.3] ${selected.className}`}>
+              <div className={`project-thumb aspect-[1.6] sm:aspect-[1.3] ${selected.className}`}>
                 <img src={selected.photos[activePhoto]} alt={`${selected.title} screenshot ${activePhoto + 1}`} className="relative z-10 size-full object-contain object-center bg-black/20 rounded-lg" onError={(event) => { event.currentTarget.style.display = "none"; }} />
                 <span className="absolute left-4 top-4 z-20 font-mono text-xs text-white/70">{selected.number} / {activePhoto + 1}</span>
               </div>
@@ -261,9 +261,10 @@ export function Projects() {
             </div>
 
             {/* Bagian Kanan: Teks & Detail (Scrollable) */}
+            <div className="flex min-h-0 flex-col">
             <div 
               ref={detailsScrollRef}
-              className="custom-scrollbar flex max-h-[60vh] flex-col overflow-y-auto overscroll-contain pr-2 lg:pr-4"
+              className="custom-scrollbar min-h-0 flex-1 overflow-y-auto overscroll-contain pr-2 lg:pr-4"
               onWheel={(e) => e.stopPropagation()} 
               onTouchMove={(e) => e.stopPropagation()}
             >
@@ -301,7 +302,9 @@ export function Projects() {
                 </div>
               </div>
 
-              <div className="mt-9 flex flex-wrap gap-3 pb-4">
+            </div>
+
+              <div className="mt-3 flex shrink-0 flex-wrap gap-3 border-t border-white/10 pt-3 sm:mt-5 sm:pt-4">
                 <a href={selected.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 border border-white/15 px-4 py-3 text-xs font-bold uppercase tracking-[0.12em] text-white transition-colors hover:border-lime hover:text-lime"><Github size={16} />GitHub repo</a>
                 {selected.demo && <a href={selected.demo} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 bg-lime px-4 py-3 text-xs font-bold uppercase tracking-[0.12em] text-ink transition-colors hover:bg-white"><ExternalLink size={16} />Live demo</a>}
               </div>
