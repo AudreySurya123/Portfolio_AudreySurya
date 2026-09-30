@@ -32,7 +32,7 @@ const projects = [
     description: "A Laravel-based inventory management system for tracking items, managing stock, and generating reports. It provides a clear and structured way to record and monitor equipment data, complete with PDF and Excel export for reporting needs.", 
     problemSolution: "PT KAI Daop 7 Madiun did not have a system to record and manage its equipment and inventory data, making it difficult to track item availability, monitor stock, and generate accurate reports. To solve this, I built a Laravel-based inventory management system that centralizes equipment data, stock tracking, and reporting in one place, complete with PDF and Excel export features to make sharing reports easier for the team.",
     role: "Handled the project end-to-end, including API design and testing, frontend and backend development, database structuring, and building the core business logic for inventory and stock management.",
-    photos: ["/projects/kai1.webp", "/projects/kai2.webp", "/projects/kai3.webp", "/projects/kai4.webp", "/projects/kai5.webp", "/projects/kai6.webp", "/projects/kai7.webp", "/projects/kai8.webp"], 
+    photos: ["/projects/kai1.webp", "/projects/kai2.webp", "/projects/kai3.webp", "/projects/kai4.webp", "/projects/kai5.webp", "/projects/kai6.webp", "/projects/kai7.webp"], 
     github: "https://github.com/AudreySurya123/Katalog-Barang", 
     demo: "https://katalogbarang.tifpsdku.com/login" 
   },
@@ -88,7 +88,7 @@ const projects = [
     description: "A habit tracking web application with a Neobrutalism-styled interface. It offers JWT-based authentication, full habit management (CRUD), a daily check-in system with automatic validation, streak and progress statistics, and an interactive calendar to review habit history by date.", 
     problemSolution: "Many people struggle to stay consistent with habits due to a lack of simple, motivating ways to track their progress. Habitmu was built to solve this by letting users manage their habits, check in daily with built-in validation, and monitor progress through streaks and statistics, along with an interactive calendar to review their history.",
     role: "Developed the application end-to-end, covering the Neobrutalism UI/UX design, JWT-based authentication, complete habit CRUD operations, automated daily check-ins, logic for streak calculations, and an interactive history calendar.",
-    photos: ["/projects/habit1.webp", "/projects/habit2.webp", "/projects/habit3.webp", "/projects/habit4.webp", "/projects/habit5.webp"], 
+    photos: ["/projects/habit1.webp", "/projects/habit2.webp", "/projects/habit3.webp"], 
     github: "https://github.com/AudreySurya123/FE_Habitmu", 
     demo: null 
   },
